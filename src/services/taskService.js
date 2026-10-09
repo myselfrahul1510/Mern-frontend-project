@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_URL =
   import.meta.env.VITE_API_URL ||
-  'http://34.231.102.107:5000/api/tasks';
+  'http://52.204.103.254:5000/api/tasks';
 
 const api = axios.create({
   baseURL: API_URL,
@@ -45,7 +45,7 @@ const taskService = {
   // Check API health
   healthCheck: async () => {
     const response = await axios.get(
-      'http://34.231.102.107:5000/api/health'
+      'http://52.204.103.254:5000/api/health'
     );
     return response.data;
   },
